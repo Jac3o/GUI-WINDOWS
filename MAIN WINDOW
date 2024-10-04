@@ -19,3 +19,8 @@ Signup_button = PushButton(buttons_box, text="Sign Up", command=open_signup, ali
 exit_button = PushButton(buttons_box_exit, text="Exit", command=exit_routine, align="left")   # buttontoexit
 app.bg = "white"
 text_blank = Text(app, text=" ")
+
+#################################
+# running the program            #
+#################################
+app.display()
