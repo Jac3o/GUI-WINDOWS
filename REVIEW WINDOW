@@ -1,0 +1,7 @@
+review_W = Window(app, title="Restaurant Review")
+text_blank = Text(review_W, text="")
+text_blank = Text(review_W, text="Welcome to the review page")
+open_button = TextBox(review_W, text="Please enter your review title here and comments below",height = 3, width = 45, multiline=True, scrollbar=True)
+Re_textbox = TextBox(review_W, height = 10, width = 45, multiline=True, scrollbar=True)
+submit_button = PushButton(review_W, text="Submit", command=save_review)  #this makes sure trhat the submit button when pressed starts the save review function
+back_button = PushButton(review_W, text="Back", command=go_home)  #this makes sure that the back button when pressed starts the go home function
