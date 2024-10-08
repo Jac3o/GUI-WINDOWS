@@ -1,0 +1,18 @@
+signup_W = Window(app, title="Sign Up")
+text_blank = Text(signup_W, text="Sign up Page")
+text_blank = Text(signup_W, text="Please enter your first name")   
+fname_s_textbox = TextBox(signup_W, text="", width = 45)          # this is creating a blank text box for the user to enter their first name
+text_blank = Text(signup_W, text="Please enter your second name")
+sname_s_textbox = TextBox(signup_W, text="", width = 45)
+text_blank = Text(signup_W, text="Please enter your username")
+username_s = TextBox(signup_W, text="", width = 45)					# this is creating a blank text box for the user to enter their username
+text_blank = Text(signup_W, text="Please enter your password")
+password_s = TextBox(signup_W, text="", width = 45)
+text_blank = Text(signup_W, text="Please enter your email")
+email_s = TextBox(signup_W, text="", width = 45)					# this is creating a blank text box for the user to enter their email
+cancel_button = PushButton(signup_W, text="Cancel", command=go_home)
+save_user_button = PushButton(signup_W, text="Save", command=signup_validation)
+#
+# close all windows to start
+review_W.hide()
+signup_W.hide()
