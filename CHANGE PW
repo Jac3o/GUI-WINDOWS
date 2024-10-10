@@ -1,0 +1,25 @@
+pw_window = Window(app, title="Change Password", height = 400) #Title of app set to 400 height
+pw_picture_box = Box(pw_window, width="fill", align="top")
+pw_window.hide()
+
+pw_picture = Picture(pw_picture_box, image="logo.png", align ="right", height=46, width=100 )
+pw_exit_button = PushButton(pw_picture_box, text="Cancel", align="left", command=go_home)
+
+pw_toptxt1 = Text(pw_window, text=" Please Enter Details ", size=20, align="top") #title of the review site
+
+pw_box1 = Box(pw_window, layout="grid")
+pw_text1 = Text(pw_box1, text="Enter your username        ", grid=[0,0])
+pw_txtbox1 = TextBox(pw_box1, width=30, grid=[1,0])
+
+pw_spacetxt1 = Text(pw_box1, text="      ", grid=[0,1])
+
+pw_text2 = Text(pw_box1, text="Enter your new password    ", grid=[0,2])
+pw_txtbox2 = TextBox(pw_box1, width=30, grid=[1,2])
+
+pw_spacetxt2 = Text(pw_box1, text="      ", grid=[0,3])
+
+pw_text3 = Text(pw_box1, text="Enter your username        ", grid=[0,4])
+pw_txtbox3 = TextBox(pw_box1, width=30, grid=[1,4])
+
+pw_spacetxt3 = Text(pw_window, text="       ")
+pw_button = PushButton(pw_window, text="Confirm")
