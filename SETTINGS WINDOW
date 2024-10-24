@@ -1,0 +1,12 @@
+settings_window = Window(app, title="Settings", height = 400)
+
+settings_picture_box = Box(settings_window, width="fill", align="top")
+pw_window.hide()
+
+settings_picture = Picture(settings_picture_box, image="logo.png", align ="right", height=46, width=100 )
+settings_exit_button = PushButton(settings_picture_box, text="Back", align="left", command=go_dashboard) #adds a settings exit button that sends the user back to the dashboard
+
+lightmodebutton = CheckBox(settings_window, text="Light Mode", command = light_mode) #button that changes colour background
+darkmodebutton = CheckBox(settings_window, text="Dark Mode", command = dark_mode) #button that changes colour background
+
+settings_exit_button.bg = "light blue"
