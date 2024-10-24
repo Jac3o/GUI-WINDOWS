@@ -1,0 +1,16 @@
+payment_window = Window(app, title="Payment", height = 400)
+
+payment_picture_box = Box(payment_window, width="fill", align="top")
+pw_window.hide()
+picture = Picture(payment_picture_box, image="logo.png", align ="right", height=46, width=100 )
+
+payment_exit_button = PushButton(payment_picture_box, text="Back", align="left", command=go_dashboard) #adds a settings exit button that sends the user back to the dashboard
+
+payment_details_box = Box(payment_window, align = "left", border = True, width = 150, height = 150)
+cardnumber_tb = TextBox(payment_details_box, "Enter card number", width = 25)
+account_number_tb = TextBox(payment_details_box, "Enter account number", align = "top", width = 25)
+security_code_tb = TextBox(payment_details_box, "Enter security code", align = "top", width = 25)
+Expiry_date_tb = TextBox(payment_details_box, "Enter expiry date", align = "top", width = 25)
+Card_holdersname_tb = TextBox(payment_details_box, "Enter card holders name", align = "top", width = 25)
+
+payment_book = PushButton(payment_window, text="Pay and confirm booking", align="left", command=confirm_booking) 
