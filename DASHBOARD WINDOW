@@ -1,0 +1,33 @@
+dashboard_window = Window(app, title="Dashboard", height = 400)
+
+dashboard_picture_box = Box(dashboard_window, width="fill", align="top")
+pw_window.hide()
+
+review_button_dashboard_box = Box(dashboard_window, align = "bottom", width = "fill")
+
+dashboard_picture = Picture(dashboard_picture_box, image="logo.png", align ="right", height=46, width=100 )
+dashboard_exit_button = PushButton(dashboard_picture_box, text="Cancel", align="left", command=go_home)
+
+dashboard_settings_box = Box(dashboard_window, align = "bottom", width = "fill")
+dashboard_settings_button = PushButton(review_button_dashboard_box, text="Settings", align="right", command=open_settings)
+
+departing_airport_box = Box(dashboard_window, align = "bottom", width = "fill")
+departing_airport = Combo(dashboard_window, options = ("Luton Airport", "Heathrow Airport", "Gatwick Airport"), width = 30)
+
+destination_airport_box = Box(dashboard_window, align = "bottom", width = "fill")
+destination_airport = Combo(dashboard_window, options = ("Frankfurt Airport", "Paris Airport", "Glasgow Airport"), width = 30)
+
+typeofticket_box = Box(dashboard_window, align = "bottom", width = "fill")
+typeofticket = Combo(dashboard_window, options = ("Economy", "Business Class", "First Class"), width = 30)
+
+
+review_button_dashboard = PushButton(review_button_dashboard_box, text="Leave a review?", align="left", command=open_review)
+paynow_button_dashboard = PushButton(review_button_dashboard_box, text="Pay and confirm", command=payment_screen)
+
+date_of_departure_dashboard = TextBox(dashboard_window, text = "Please enter your departure date", width = 36)
+date_of_return_dashboard = TextBox(dashboard_window, text = "Please enter your return date", width = 36)
+
+paynow_button_dashboard.bg = "light blue"
+dashboard_exit_button.bg = "light blue"
+dashboard_settings_button.bg = "light blue"
+review_button_dashboard.bg = "light blue"
