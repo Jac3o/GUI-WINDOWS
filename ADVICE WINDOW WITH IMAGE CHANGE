@@ -1,0 +1,20 @@
+###############################
+#     BUILD ADVICE WINDOW     #
+###############################
+
+advice_window = Window(app, title="Advice", height = 400)
+advice_picture_box = Box(advice_window, width="fill", align="top")
+advice_logo = Picture(advice_picture_box, image = "Toka logo3.png", align = "right")
+advice_exit_button = PushButton(advice_picture_box, text="Back", align="left", command=go_dashboard)
+advice_combo = Combo(advice_picture_box, options=["Healthy Eating advice", "Fitness advice"], command = choose_advice)
+Healthy_eating_image = Picture(advice_picture_box, width=300, height=215) #good for people trying to lose weight
+
+
+#CHOOSE ADVICE IMAGE
+def choose_advice(selected_value):
+	# change image depending on combo selection
+	if selected_value == "Healthy Eating advice":
+		Healthy_eating_image.image = "healthy eating.png"
+		#Healthy_eating_image.width
+	else:
+		Healthy_eating_image.image = "fitness.png"
