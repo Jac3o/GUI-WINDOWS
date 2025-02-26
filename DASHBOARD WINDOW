@@ -1,33 +1,33 @@
-dashboard_window = Window(app, title="Dashboard", height = 400)
+###############################
+# BUILD DASHBOARD WINDOW      #
+###############################
 
+dashboard_window = Window(app, title="Dashboard", height = 400, width = 540)
 dashboard_picture_box = Box(dashboard_window, width="fill", align="top")
-pw_window.hide()
-
+text_blank = Text(dashboard_window, text = "Welcome, User", size = 20)
+dashboard_exit_button = PushButton(dashboard_picture_box, text="Cancel", command=go_home, align="left")   #######button to go back
+text_signup = Text(dashboard_picture_box, text = "SIGN UP FOR PREMIUM, GET MORE FEATURES", size = 12)
 review_button_dashboard_box = Box(dashboard_window, align = "bottom", width = "fill")
 
-dashboard_picture = Picture(dashboard_picture_box, image="logo.png", align ="right", height=46, width=100 )
-dashboard_exit_button = PushButton(dashboard_picture_box, text="Cancel", align="left", command=go_home)
+dashboard_picture = Picture(dashboard_picture_box, image="Toka Logo.png", align ="right", height=46, width=100 )
+#dashboard_exit_button = PushButton(dashboard_picture_box, text="Cancel", align="left", command=go_home)
+
+dashboard_hikingpic = Picture(dashboard_window, image ="hiking2.png", align = "top")
+
+#dashboard_testpic = Picture(dashboard_window, image ="Toka logo.png", align = "left")
 
 dashboard_settings_box = Box(dashboard_window, align = "bottom", width = "fill")
-dashboard_settings_button = PushButton(review_button_dashboard_box, text="Settings", align="right", command=open_settings)
+#dashboard_settings_button = PushButton(dashboard_window, text="Settings", command = open_settings)
 
-departing_airport_box = Box(dashboard_window, align = "bottom", width = "fill")
-departing_airport = Combo(dashboard_window, options = ("Luton Airport", "Heathrow Airport", "Gatwick Airport"), width = 30)
+#review_button_dashboard = PushButton(review_button_dashboard_box, text="Leave a review?", align="left")
+#premium_dashboard_button = PushButton(dashboard_window, text="SIGN UP TO PREMIUM", align = "top")
 
-destination_airport_box = Box(dashboard_window, align = "bottom", width = "fill")
-destination_airport = Combo(dashboard_window, options = ("Frankfurt Airport", "Paris Airport", "Glasgow Airport"), width = 30)
+buttons_box = Box(dashboard_window, width="fill", align="bottom")   ###add box for buttons
+dashboard_settings_button = PushButton(buttons_box, text="Settings", command=open_settings, align="left")   # button to go to settings
 
-typeofticket_box = Box(dashboard_window, align = "bottom", width = "fill")
-typeofticket = Combo(dashboard_window, options = ("Economy", "Business Class", "First Class"), width = 30)
+premium_dashboard_button = PushButton(buttons_box, text="GET PREMIUM", command = open_payment , align="left")   # button to sign up to premium
+plot_button = PushButton(buttons_box, text="See your progress", command = plot_steps , align="left")   # button to plot
+advice_button = PushButton(buttons_box, text="Advice", command = open_advice, align = "left")
+input_data_button = PushButton(buttons_box, text="Input Data", command = open_input_data, align = "left")
+leaderboard_button = PushButton(buttons_box, text = "Leaderboard", command = leaderboard, align = "left")
 
-
-review_button_dashboard = PushButton(review_button_dashboard_box, text="Leave a review?", align="left", command=open_review)
-paynow_button_dashboard = PushButton(review_button_dashboard_box, text="Pay and confirm", command=payment_screen)
-
-date_of_departure_dashboard = TextBox(dashboard_window, text = "Please enter your departure date", width = 36)
-date_of_return_dashboard = TextBox(dashboard_window, text = "Please enter your return date", width = 36)
-
-paynow_button_dashboard.bg = "light blue"
-dashboard_exit_button.bg = "light blue"
-dashboard_settings_button.bg = "light blue"
-review_button_dashboard.bg = "light blue"
