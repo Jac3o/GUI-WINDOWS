@@ -1,7 +1,24 @@
-review_W = Window(app, title="Restaurant Review")
-text_blank = Text(review_W, text="")
-text_blank = Text(review_W, text="Welcome to the review page")
-open_button = TextBox(review_W, text="Please enter your review title here and comments below",height = 3, width = 45, multiline=True, scrollbar=True)
-Re_textbox = TextBox(review_W, height = 10, width = 45, multiline=True, scrollbar=True)
-submit_button = PushButton(review_W, text="Submit", command=save_review)  #this makes sure trhat the submit button when pressed starts the save review function
-back_button = PushButton(review_W, text="Back", command=go_home)  #this makes sure that the back button when pressed starts the go home function
+review_window = App()
+view_box1 = Box(review_window, width="fill", align="top")
+review_ProductBox = Combo(view_box1, width=70,height=2, options=[""])
+review_box1 = Box(review_window, width="fill", align="top")
+review_backbutton = PushButton(review_window, text = "Back", command = go_home, align = "top")
+review_star1 = Text(review_box1, text="★", align="left", size=20)
+review_star2 = Text(review_box1, text="★", align="left", size=20)
+review_star3 = Text(review_box1, text="★", align="left", size=20)
+review_star4 = Text(review_box1, text="★", align="left", size=20)
+review_star5 = Text(review_box1, text="★", align="left", size=20) # Creating stars
+review_star1.when_clicked = star1
+review_star2.when_clicked = star2
+review_star3.when_clicked = star3
+review_star4.when_clicked = star4
+review_star5.when_clicked = star5
+
+save_review_button = PushButton(review_window, text="Save star review", width = 15, command = None)
+blanks = Text(review_window, text = "")
+plot_review_button = PushButton(review_window, text ="Plot star reviews", width = 15, command = None)
+blanks = Text(review_window, text = "")
+#load_button = PushButton(review_window, text = "Load", width = 15, command = None )
+blanks = Text(review_window, text = "")
+blanks = Text(review_window, text = "Enter your review here")
+reviewtext = TextBox(review_window, width = 60, height = 30, multiline = True)
