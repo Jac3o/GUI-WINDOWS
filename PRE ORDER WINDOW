@@ -1,0 +1,23 @@
+#
+#PRE-ORDER WINDOW#
+#
+preorder_window = Window(app, title="Pre Order", height = 400, width = 540)
+preorder_box = Box(preorder_window, width = "fill", align="top")
+preorder_box2 = Box(preorder_window, width = "fill", align = "top")
+text = Text(preorder_box, text = "Pre-Order", size = 12)
+text = Text(preorder_box, text = "Collection is for today", size = 8)
+text = Text(preorder_box, text = "Product:", size = 10, align = "left")
+preorder_ProductBox = Combo(preorder_box, width=45,height=2, options=[""])
+text = Text(preorder_box2, text = "Quantity:", size = 10, align = "left")
+preorder_QuantityBox = Combo(preorder_box2, width=45,height=2, options=["1", "2", "3", "4", "5", "6", "7", "8"])
+addButton = PushButton(preorder_box2, text = "Add to order", command = addorder)
+orderlistbox = ListBox(preorder_window, height = 200, width = 300)
+
+
+#
+signup_W.hide()
+review_window.hide()
+dashboard_window.hide()
+staff_window.hide()
+#preorder_window.hide()
+app.display()
