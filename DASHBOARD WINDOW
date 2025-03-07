@@ -30,4 +30,3 @@ plot_button = PushButton(buttons_box, text="See your progress", command = plot_s
 advice_button = PushButton(buttons_box, text="Advice", command = open_advice, align = "left")
 input_data_button = PushButton(buttons_box, text="Input Data", command = open_input_data, align = "left")
 leaderboard_button = PushButton(buttons_box, text = "Leaderboard", command = leaderboard, align = "left")
-
