@@ -1,11 +1,11 @@
 app = App(title="LOGIN FUNCTION", height = 400) #Title of app set to 400 height
 text_blank = Text(app, text=" ")
-text_blank = Text(app, text=" Welcome to the Restaurant review site ") #title of the review site
+text_blank = Text(app, text=" Welcome to BeanBrew ") #title of the review site
 text_blank = Text(app, text=" ")
-text = Text(app, text= "enter user name") #code prompting username entry
+text = Text(app, text= "Enter Username") #code prompting username entry
 user_textbox = TextBox(app)
 text_blank = Text(app, text=" ")
-text = Text(app, text= "enter user Password") #code promting password entry
+text = Text(app, text= "Enter Password") #code promting password entry
 PW_textbox = TextBox(app, hide_text=True)
 #
 text_blank = Text(app, text=" ") #text boxes to enter username and password
@@ -19,8 +19,3 @@ Signup_button = PushButton(buttons_box, text="Sign Up", command=open_signup, ali
 exit_button = PushButton(buttons_box_exit, text="Exit", command=exit_routine, align="left")   # buttontoexit
 app.bg = "white"
 text_blank = Text(app, text=" ")
-
-#################################
-# running the program            #
-#################################
-app.display()
